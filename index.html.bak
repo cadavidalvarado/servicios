@@ -1,22 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Servicios | Carlos Alvarado</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Alpine.js para el menú responsive -->
+  <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </head>
 <body class="bg-gray-50 text-gray-800 scroll-smooth font-sans">
-  <!-- Navbar -->
-  <nav class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-md z-50">
+  <!-- Navbar Responsive -->
+  <nav x-data="{ open: false }"
+       class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-md z-50">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#home" class="text-2xl font-extrabold text-blue-600 hover:text-blue-800 transition">Carlos Alvarado</a>
-      <ul class="flex space-x-6 text-gray-700 font-medium">
-        <li><a href="#sobre-mi" class="hover:text-blue-600">Sobre Mí</a></li>
-        <li><a href="#proyectos" class="hover:text-blue-600">Proyectos</a></li>
-        <li><a href="#estudios" class="hover:text-blue-600">Estudios</a></li>
-        <li><a href="#habilidades" class="hover:text-blue-600">Habilidades</a></li>
-        <li><a href="#contacto" class="hover:text-blue-600">Contacto</a></li>
+      <!-- Logo / Nombre -->
+      <a href="#home"
+         class="text-2xl font-extrabold text-blue-600 hover:text-blue-800 transition">
+        Carlos Alvarado
+      </a>
+
+      <!-- Botón hamburguesa (móvil) -->
+      <button @click="open = !open" class="md:hidden focus:outline-none">
+        <!-- Icono menú -->
+        <svg xmlns="http://www.w3.org/2000/svg"
+             :class="{ 'hidden': open, 'block': !open }"
+             class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <!-- Icono cerrar -->
+        <svg xmlns="http://www.w3.org/2000/svg"
+             :class="{ 'block': open, 'hidden': !open }"
+             class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Links -->
+      <ul :class="{ 'block': open, 'hidden': !open }"
+          class="hidden md:flex space-x-6 text-gray-700 font-medium">
+        <li><a href="#sobre-mi" class="block py-2 md:py-0 hover:text-blue-600">Sobre Mí</a></li>
+        <li><a href="#proyectos" class="block py-2 md:py-0 hover:text-blue-600">Proyectos</a></li>
+        <li><a href="#estudios" class="block py-2 md:py-0 hover:text-blue-600">Estudios</a></li>
+        <li><a href="#habilidades" class="block py-2 md:py-0 hover:text-blue-600">Habilidades</a></li>
+        <li><a href="#contacto" class="block py-2 md:py-0 hover:text-blue-600">Contacto</a></li>
       </ul>
     </div>
   </nav>
@@ -61,7 +89,7 @@
           <p class="text-sm text-gray-600"><strong>Reportes Clínicos y Operativos</strong></p>
           <p class="mt-3 mb-1"><strong>Rol:</strong> Coordinador de Desarrollo</p>
           <p class="mb-1"><strong>Descripción:</strong> Aplicaciones para reportes clínicos y operativos.</p>
-          <p><strong>Resultado:</strong> Ooptimización de indicadores con reportes automatizados.</p>
+          <p><strong>Resultado:</strong> Optimización de indicadores con reportes automatizados.</p>
         </div>
         <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition">
           <h3 class="text-xl font-bold mb-2 text-gray-800">Enkube</h3>
@@ -79,7 +107,7 @@
     <div class="max-w-3xl mx-auto px-6 space-y-6">
       <h2 class="text-3xl font-semibold text-blue-600">Estudios</h2>
       <ul class="text-base leading-relaxed space-y-4">
-        <li><strong>Magíster en Gerencia de la Innovación</strong> (Universidad Industrial de Santander - UIS): Formación en liderar proyectos innovadores, optimizar procesos y gestionar equipos para desarrollar soluciones de alto impacto.</li>
+        <li><strong>Magíster en Gerencia de la Innovación</strong> (Universidad Industrial de Santander - UIS): Formación para liderar proyectos innovadores, optimizar procesos y gestionar equipos para desarrollar soluciones de alto impacto.</li>
         <li><strong>Ingeniería de Sistemas</strong> (Universidad Industrial de Santander - UIS): Formación integral en análisis, diseño y construcción de software, con énfasis en buenas prácticas y calidad.</li>
       </ul>
     </div>
