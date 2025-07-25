@@ -30,7 +30,7 @@
         <a href="#proyectos" class="inline-block mt-4 px-6 py-3 bg-white text-blue-600 font-semibold rounded-full shadow-lg hover:shadow-xl transition">Ver Proyectos</a>
       </div>
       <div class="w-40 h-40 md:w-48 md:h-48 bg-gray-200 rounded-full overflow-hidden ring-4 ring-white shadow-lg">
-        <img src="foto.jpg" alt="Foto de Carlos Alvarado" class="w-full h-full object-cover" />
+        <span class="flex items-center justify-center h-full text-gray-400">Tu Foto</span>
       </div>
     </div>
   </section>
