@@ -61,9 +61,10 @@
         <a href="#contacto" class="px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-blue-600 transition">Contáctame</a>
       </div>
     </div>
-    <div class="hidden md:block w-48 h-48 bg-gray-200 rounded-full overflow-hidden ring-4 ring-white shadow-lg">
-      <img src="foto.jpg" alt="Foto de Carlos Alvarado" class="w-full h-full object-cover" />
-    </div>
+ <!-- Foto visible en todos los dispositivos con tamaño adaptativo -->
+      <div class="block w-32 h-32 md:w-48 md:h-48 bg-gray-200 rounded-full overflow-hidden ring-4 ring-white shadow-lg">
+        <img src="foto.jpg" alt="Foto de Carlos Alvarado" class="w-full h-full object-cover" />
+      </div>
   </div>
 </section>
 
@@ -152,12 +153,23 @@
     &copy; 2025 Carlos Alvarado. Todos los derechos reservados.
   </footer>
   
-  <button
+<button
+  id="back-to-top"
   onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-  class="fixed bottom-4 right-4 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition"
+  class="hidden fixed bottom-4 right-4 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition"
   aria-label="Volver arriba"
 >
   ↑
 </button>
+<script>
+  const btn = document.getElementById('back-to-top');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+      btn.classList.remove('hidden');
+    } else {
+      btn.classList.add('hidden');
+    }
+  });
+</script>
 </body>
 </html>

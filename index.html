@@ -53,7 +53,7 @@
 <section id="home" class="relative flex items-center justify-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white pt-24 pb-16 overflow-hidden">
   <div class="absolute inset-0 opacity-20 bg-[url('https://source.unsplash.com/1600x900/?healthcare,technology')] bg-cover bg-center"></div>
   <div class="relative max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8 px-6">
-    <div class="flex-1 space-y-4 text-center md:text-left">
+    <div class="order-last md:order-first flex-1 space-y-4 text-center md:text-left">
       <h1 class="text-4xl md:text-5xl font-extrabold leading-tight drop-shadow-lg">Carlos Alvarado</h1>
       <p class="text-base md:text-lg lg:text-xl font-medium drop-shadow-md">Creo y lidero soluciones tecnológicas que optimizan procesos operativos y clínicos, automatizan reportes y maximizan la eficiencia en el sector salud.</p>
       <div class="mt-6 flex justify-center md:justify-start space-x-4">
@@ -61,9 +61,10 @@
         <a href="#contacto" class="px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-blue-600 transition">Contáctame</a>
       </div>
     </div>
-    <div class="hidden md:block w-48 h-48 bg-gray-200 rounded-full overflow-hidden ring-4 ring-white shadow-lg">
-      <img src="foto.jpg" alt="Foto de Carlos Alvarado" class="w-full h-full object-cover" />
-    </div>
+ <!-- Foto visible en todos los dispositivos con tamaño adaptativo -->
+     <div class="order-first md:order-last block w-32 h-32 md:w-48 md:h-48 bg-gray-200 rounded-full overflow-hidden ring-4 ring-white shadow-lg">
+        <img src="foto.jpg" alt="Foto de Carlos Alvarado" class="w-full h-full object-cover" />
+      </div>
   </div>
 </section>
 
