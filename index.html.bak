@@ -345,11 +345,11 @@
         <div class="inline-block px-4 py-1 glass rounded-full text-sm font-medium mb-4 pulse-animation">
           <i class="fas fa-stethoscope mr-2"></i>Especialista en Tecnología para Salud
         </div>
-        <h1 class="text-4xl md:text-5xl font-bold leading-tight">
-          Transformación Digital <br>para el Sector Salud
-        </h1>
+       <h1 class="text-4xl md:text-5xl font-bold leading-tight fade-in">
+  Transformación Digital <br>para el Sector Salud
+</h1>
         <p class="text-xl text-blue-100 max-w-2xl">
-          Diseño plataformas a la medida que optimizan la gestión en su , automatizan reportes críticos, reducen hasta un 30% del tiempo en el ciclo administrativo y mejoran la oportunidad y la calidad de atención al paciente.
+          Diseño plataformas a la medida que optimizan la gestión en su institución, automatizan reportes críticos, reducen hasta un 30% del tiempo en el ciclo administrativo y mejoran la oportunidad y la calidad de atención al paciente.
         </p>
         <div class="flex space-x-4 mt-6">
           <div class="flex items-center">
@@ -765,18 +765,8 @@
       createParticles('contact-particles', 20);
     });
     
-    // Efecto de escritura para el título (opcional)
-    const titleElement = document.querySelector('#home h1');
-    if (titleElement) {
-      const text = titleElement.textContent;
-      titleElement.textContent = '';
-      titleElement.classList.add('typewriter');
-      
-      setTimeout(() => {
-        titleElement.textContent = text;
-        titleElement.classList.remove('typewriter');
-      }, 4000);
-    }
+
+    
   </script>
   <!-- Default Statcounter code for Servicios Salud
 https://cadavidalvarado.github.io/servicios/ -->
