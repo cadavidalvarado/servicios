@@ -174,23 +174,7 @@
       100% { transform: translate(0, 0px) rotate(0deg); }
     }
     
-    .typewriter {
-      overflow: hidden;
-      border-right: 2px solid var(--accent);
-      white-space: nowrap;
-      margin: 0 auto;
-      animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-    }
     
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-    
-    @keyframes blink-caret {
-      from, to { border-color: transparent }
-      50% { border-color: var(--accent) }
-    }
     
     /* Efectos de brillo y gradientes animados */
     .glow {
